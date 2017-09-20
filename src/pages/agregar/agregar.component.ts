@@ -32,4 +32,10 @@ export class AgregarComponent implements OnInit {
     this.nombreItem = '';
 
   }
+
+  eliminarItem(id:number){
+
+    this.items.splice(id, 1);
+
+  }
 }
