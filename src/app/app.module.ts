@@ -12,10 +12,12 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {ListaDeseosService} from "./service/lista-deseos.service";
 import {AgregarComponent} from "../pages/agregar/agregar.component";
+import {PlaceholderPipe} from "./pipes/placeHolder.pipes";
 
 @NgModule({
   declarations: [
     MyApp,
+    PlaceholderPipe,
     TabsPage,
     PendientesComponent,
     TerminadosComponent,
