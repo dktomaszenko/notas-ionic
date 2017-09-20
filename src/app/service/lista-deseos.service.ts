@@ -16,7 +16,6 @@ export class ListaDeseosService {
     this.listas.push(lista2);
     this.listas.push(lista3);*/
     this.cargarData();
-    console.log((this.listas));
   }
 
 
