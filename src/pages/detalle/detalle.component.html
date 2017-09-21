@@ -1,10 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title> {{ lista.nombre }} </ion-title>
+  </ion-navbar>
+</ion-header>
 
-</body>
-</html>
+<ion-card-content padding="">
+  <ion-card>
+    <ion-card-header>
+      <ion-list>
+
+        <ion-item>
+          <ion-label floating>Nombre de la lista</ion-label>
+          <ion-input type="text" [(ngModel)]="lista.nombre"></ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+
+        <ion-item *ngFor="let item of lista.items" (click)="actualizar(item)" >
+          <ion-label floating>{{item.nombre}}</ion-label>
+          <ion-input type="text" >{{item.nombre}}</ion-input>
+        </ion-item>
+
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+</ion-card-content>
